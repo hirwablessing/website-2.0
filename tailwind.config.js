@@ -10,18 +10,22 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
+    darkMode: 'class',
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         screens: {
+            xxs: '320px',
+            xs: '375px',
+            xs1: '425px',
             sm: '640px',
-            // => @media (min-width: 640px) { ... }
             md: '768px',
-            // => @media (min-width: 768px) { ... }
             lg: '1024px',
-            // => @media (min-width: 1024px) { ... }
             xl: '1280px',
-            // => @media (min-width: 1280px) { ... }
-            '2xl': '1440px'
+            '2xl': '1440px',
+            '3xl': '1536px',
+            '4xl': '1920px',
+            '5xl': '2560px',
+            '6xl': '3440px'
         },
         fontSize: {
             heading1: ['80px', { lineHeight: '96px', letterSpacing: '-0.5px' }],
@@ -53,6 +57,9 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['"Circular XX TT"', ...fontFamily.sans]
+            },
+            transitionTimingFunction: {
+                'navbar-moves': 'cubic-bezier(0.25, 0.1, 0.25, 1)'
             },
             // Customize it on globals.css :root
             colors: {
