@@ -1,6 +1,6 @@
 ## Moogli
 
-Official repository for Mooglie website v2
+Official repository for Mooglie website v2 availalble on http://staging.moogli.io.s3-website.eu-west-3.amazonaws.com/
 
 #### Features
 

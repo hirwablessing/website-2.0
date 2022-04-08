@@ -1,7 +1,7 @@
 import { createElement } from 'react'
 
 import clsxm from '../../../../../utils/clsxm'
-import { InputTextSizes, InputTextProps, IconPosition } from './types'
+import { IconPosition, InputTextProps, InputTextSizes } from './types'
 
 export const disabledStyles =
     'disabled:cursor-not-allowed disabled:bg-neutrals-10 disabled:placeholder:text-neutrals-60 disabled:text-neutrals-60'

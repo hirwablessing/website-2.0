@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import clsxm from 'src/utils/clsxm'
 
-import { InputTextProps, disabledStyles, inputTextSizes } from './utils'
+import { disabledStyles, InputTextProps, inputTextSizes } from './utils'
 
 const InputText = forwardRef<HTMLInputElement, InputTextProps>(
     (

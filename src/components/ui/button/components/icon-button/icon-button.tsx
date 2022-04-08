@@ -9,8 +9,8 @@ import {
     disabledStyles,
     loadingIconSizes
 } from '../button/utils'
-import { buttonSizes, renderButtonIcon } from './utils'
 import type { IconButtonProps } from './utils'
+import { buttonSizes, renderButtonIcon } from './utils'
 
 /**
  * Button component used for primary, secondary, subtle, and tertiary actions.
