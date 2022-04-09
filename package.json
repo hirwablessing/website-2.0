@@ -7,9 +7,7 @@
         "start": "next start",
         "lint": "next lint",
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc --loglevel=error",
-        "prepare": "husky install",
-        "test": "npm run cy:run",
-        "test:e2e:ci": "start-server-and-test dev http://localhost:3000 cy:run"
+        "prepare": "husky install"
     },
     "dependencies": {
         "clsx": "^1.1.1",
