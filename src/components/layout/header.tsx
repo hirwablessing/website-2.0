@@ -4,10 +4,29 @@ import LanguageIcon from '../assets/icons/language'
 import NavMenuIcon from '../assets/icons/nav-menu'
 import { Button } from '../ui/button'
 
-function Link({ children }: { children: React.ReactNode }) {
+function Link({
+    children,
+    style
+}: {
+    children: React.ReactNode
+    style: (
+        light: string,
+        dark: string,
+        normal?: string,
+        enlarged?: string
+    ) => string
+}) {
     return (
         <a
-            className="flex h-full items-center px-4 text-caption ease-navbar-moves text-tangaroa dark:text-[#FFFFFFCC]  dark:hover:text-white focus:font-medium dark:focus:text-white transition"
+            className={`flex h-full items-center px-4 ease-navbar-moves ${style(
+                'text-tangaroa text-opacity-[0.8]',
+                'text-[#FFFFFFCC]',
+                'text-caption',
+                'text-callout'
+            )}  ${style(
+                'hover:text-neutrals-400',
+                'hover:text-white'
+            )} focus:font-medium ${style('', 'focus:text-white')} transition`}
             href="#"
         >
             {children}
@@ -15,71 +34,109 @@ function Link({ children }: { children: React.ReactNode }) {
     )
 }
 
-export default function Header() {
+type HeaderProps = {
+    isDark?: boolean
+    isEnlarged?: boolean
+}
+
+export default function Header({
+    isDark = false,
+    isEnlarged = false
+}: HeaderProps) {
     const [isHeroDone, setIsHeroDone] = useState<boolean>(false)
-    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
+    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(isDark)
 
     useEffect(() => {
-        document.documentElement.classList.add('dark')
-
-        const hero = document.getElementById('__hero')
-        if (!hero) return
-
-        document.addEventListener('scroll', () => {
-            if (hero.getBoundingClientRect().bottom <= 0) {
-                setIsDarkTheme(false)
-            } else setIsDarkTheme(true)
-
-            if (hero.getBoundingClientRect().bottom <= 0) setIsHeroDone(true)
-            else setIsHeroDone(false)
-        })
+        // document.documentElement.classList.add('dark')
+        //
+        // const hero = document.getElementById('__hero')
+        // if (!hero) return
+        //
+        // document.addEventListener('scroll', () => {
+        //     if (hero.getBoundingClientRect().bottom <= 0) {
+        //         setIsDarkTheme(false)
+        //     } else setIsDarkTheme(true)
+        //
+        //     if (hero.getBoundingClientRect().bottom <= 0) setIsHeroDone(true)
+        //     else setIsHeroDone(false)
+        // })
     }, [])
 
+    const style = (light = '', dark = '', normal = '', enlarged = '') => {
+        return ` ${isDarkTheme ? dark : light} ${
+            isEnlarged ? enlarged : normal
+        }`
+    }
+
     return (
-        <div className={(isDarkTheme ? 'dark' : '') + ' sticky top-0 z-20'}>
+        <div
+            className={
+                style('bg-white', 'bg-black') + ' sticky top-0 z-20 mt-5'
+            }
+        >
             <div
-                className={
-                    'h-10 lg:h-16 bg-white dark:bg-black text-[#060F33] xxs:px-2 xs:px-4 sm:px-6 lg:px-32 xl:px-36 2xl:px-56 3xl:px-[272px] 4xl:px-[464px] 5xl:px-[784px] 6xl:px-[1224px]'
-                }
+                className={`${style(
+                    '',
+                    '',
+                    'h-10 lg:h-16',
+                    'h-16 lg:h-20'
+                )} text-[#060F33] xxs:px-2 xs:px-4 sm:px-6 lg:px-32 xl:px-36 2xl:px-56 3xl:px-[272px] 4xl:px-[464px] 5xl:px-[784px] 6xl:px-[1224px]`}
             >
                 <div className="flex h-full w-full items-center justify-between">
                     <div className="flex items-center">
                         <div className="mr-4 block lg:hidden">
-                            <NavMenuIcon />
+                            <NavMenuIcon style={style} />
                         </div>
                         <div
-                            className={
-                                "w-[102px] h-6 bg-cover bg-[url('/images/logo-group-horizontal-dark.svg')] dark:bg-[url('/images/logo-group-horizontal-light.svg')] transform transition ease-navbar-moves" +
-                                (isHeroDone && ' scale-[1.6]')
-                            }
+                            className={`bg-cover ${style(
+                                "bg-[url('/images/logo-group-horizontal-dark.svg')]",
+                                "bg-[url('/images/logo-group-horizontal-light.svg')]",
+                                'w-[102px] h-6',
+                                'w-[136px] h-8'
+                            )} transform transition ease-navbar-moves`}
                         />
                     </div>
 
                     <div className="flex h-full items-center">
                         <div className="hidden lg:block">
                             <div className="flex h-full items-center">
-                                <Link>Home</Link>
-                                <Link>App</Link>
-                                <Link>Mupi</Link>
-                                <Link>Contact us</Link>
+                                <Link style={style}>App</Link>
+                                <Link style={style}>Home</Link>
+                                <Link style={style}>Mupi</Link>
+                                <Link style={style}>Contact us</Link>
                             </div>
                         </div>
                         <div className="mx-3 h-6 w-[1px] bg-gray-400 hidden lg:block" />
                         <div className="flex">
                             <div className="hidden lg:block">
-                                <button className="group flex h-10 w-10 items-center justify-center rounded-3xl hover:bg-[#FFFFFF0D] focus:bg-[#FFFFFF0D] group transition transform">
-                                    <LanguageIcon />
+                                <button
+                                    className={`group flex h-10 w-10 items-center justify-center rounded-3xl ${style(
+                                        'hover:bg-tangaroa hover:bg-opacity-5 focus:bg-tangaroa focus:bg-opacity-5',
+                                        'hover:bg-[#FFFFFF0D] focus:bg-[#FFFFFF0D]'
+                                    )} group transition transform`}
+                                >
+                                    <LanguageIcon style={style} />
                                 </button>
                             </div>
                             <Button
-                                className="h-8 lg:h-10 text-neutrals-400 dark:text-white hover:text-white ease-navbar-moves ml-2 hover:bg-[#FFFFFF0D] hover:border-white hover:outline-white"
+                                className={`${style(
+                                    'text-neutrals-400',
+                                    'text-white border-opacity-50',
+                                    'h-8 lg:h-10',
+                                    'h-10 lg:h-12'
+                                )} ease-navbar-moves ml-2  p-0 border-[1px] pl-5 pr-3.5`}
                                 variant="subtle"
-                                size="sm"
                                 iconPosition="right"
-                                color="white"
-                                icon={ArrowDownIcon}
+                                icon={() => <ArrowDownIcon style={style} />}
                             >
-                                <span className="text-neutrals-400 dark:text-white">
+                                <span
+                                    className={style(
+                                        'text-neutrals-400',
+                                        'text-white',
+                                        'text-caption2',
+                                        'text-caption'
+                                    )}
+                                >
                                     Get the Beta
                                 </span>
                             </Button>
