@@ -2,8 +2,6 @@ import Header from '@/components/layout/header'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Fragment, useEffect } from 'react'
-import Hero from '@/components/hero'
-import App from './app'
 
 const Home: NextPage = () => {
     useEffect(() => {
@@ -17,10 +15,11 @@ const Home: NextPage = () => {
                 <title>Moogli</title>
             </Head>
 
-            <main>
+            <main className="bg-neutrals-30 h-screen">
+                <Header isDark />
+                <Header isDark isEnlarged />
                 <Header />
-                <Hero />
-                <App />
+                <Header isEnlarged />
             </main>
         </Fragment>
     )

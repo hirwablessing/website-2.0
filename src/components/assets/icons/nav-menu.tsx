@@ -1,4 +1,8 @@
-export default function NavMenuIcon() {
+export default function NavMenuIcon({
+    style
+}: {
+    style: (light: string, dark: string) => string
+}) {
     return (
         <svg
             version="1.1"
@@ -11,17 +15,17 @@ export default function NavMenuIcon() {
             enableBackground="new 0 0 24 24"
         >
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M3.25,6c0-0.414,0.336-0.75,0.75-0.75h16c0.414,0,0.75,0.336,0.75,0.75S20.414,6.75,20,6.75H4C3.586,6.75,3.25,6.414,3.25,6
 	z"
             />
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M3.25,12c0-0.414,0.336-0.75,0.75-0.75h16c0.414,0,0.75,0.336,0.75,0.75s-0.336,0.75-0.75,0.75H4
 	C3.586,12.75,3.25,12.414,3.25,12z"
             />
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M4,17.25c-0.414,0-0.75,0.336-0.75,0.75S3.586,18.75,4,18.75h16c0.414,0,0.75-0.336,0.75-0.75s-0.336-0.75-0.75-0.75H4z"
             />
         </svg>

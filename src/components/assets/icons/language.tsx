@@ -1,4 +1,8 @@
-export default function LanguageIcon() {
+export default function LanguageIcon({
+    style
+}: {
+    style: (light: string, dark: string) => string
+}) {
     return (
         <svg
             className="h-6 group-focus:h-5"
@@ -10,7 +14,7 @@ export default function LanguageIcon() {
             viewBox="0 0 24 24"
         >
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M20.689,19.705l-4.5-10.5C16.071,8.929,15.8,8.75,15.5,8.75c-0.3,0-0.571,0.179-0.689,0.455l-2.37,5.529
 	c-1.852-0.058-3.361-0.191-4.496-0.842c0.246-0.317,0.476-0.652,0.691-0.994c1.082-1.731,1.525-3.881,1.602-6.148H12
 	c0.414,0,0.75-0.336,0.75-0.75S12.414,5.25,12,5.25h-1.75V4c0-0.414-0.336-0.75-0.75-0.75S8.75,3.586,8.75,4v1.25H4

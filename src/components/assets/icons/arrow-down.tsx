@@ -1,4 +1,8 @@
-export default function ArrowDownIcon() {
+export default function ArrowDownIcon({
+    style
+}: {
+    style: (light: string, dark: string) => string
+}) {
     return (
         <svg
             className="h-6 w-6 ml-2"
@@ -10,13 +14,13 @@ export default function ArrowDownIcon() {
             viewBox="0 0 24 24"
         >
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M7.47,12.53l4,4c0.293,0.293,0.768,0.293,1.061,0l4-4c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0l-2.72,2.72
 	V7.992c0-0.41-0.336-0.742-0.75-0.742s-0.75,0.332-0.75,0.742v6.197l-2.72-2.72c-0.293-0.293-0.768-0.293-1.061,0
 	C7.177,11.763,7.177,12.237,7.47,12.53z"
             />
             <path
-                className="fill-neutrals-400 dark:fill-white"
+                className={style('fill-neutrals-400', 'fill-white')}
                 d="M20.75,12c0,4.833-3.917,8.75-8.75,8.75c-4.832,0-8.75-3.917-8.75-8.75c0-4.832,3.918-8.75,8.75-8.75
 	C16.833,3.25,20.75,7.168,20.75,12z M12,19.25c4.004,0,7.25-3.246,7.25-7.25c0-4.004-3.246-7.25-7.25-7.25
 	c-4.004,0-7.25,3.246-7.25,7.25C4.75,16.004,7.996,19.25,12,19.25z"
