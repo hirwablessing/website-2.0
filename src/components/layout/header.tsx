@@ -84,15 +84,17 @@ export default function Header({
             >
                 <div className="flex h-full w-full items-center justify-between">
                     <div className="flex items-center">
-                        <div className="mr-4 block lg:hidden">
-                            <NavMenuIcon style={style} />
+                        <div className="block lg:hidden h-8 w-8 lg:h-10 lg:w-10 mr-2">
+                            <div className='h-full w-full flex items-center justify-center'>
+                                <NavMenuIcon style={style} />
+                            </div>
                         </div>
                         <div
                             className={`bg-cover ${style(
                                 "bg-[url('/images/logo-group-horizontal-dark.svg')]",
                                 "bg-[url('/images/logo-group-horizontal-light.svg')]",
-                                'w-[102px] h-6',
-                                'w-[136px] h-8'
+                                'w-[103px] h-6',
+                                'w-[137px] h-8'
                             )} transform transition ease-navbar-moves`}
                         />
                     </div>
