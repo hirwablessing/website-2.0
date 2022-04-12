@@ -85,7 +85,7 @@ export default function Header({
                 <div className="flex h-full w-full items-center justify-between">
                     <div className="flex items-center">
                         <div className="block lg:hidden h-8 w-8 lg:h-10 lg:w-10 mr-2">
-                            <div className='h-full w-full flex items-center justify-center'>
+                            <div className="h-full w-full flex items-center justify-center">
                                 <NavMenuIcon style={style} />
                             </div>
                         </div>
