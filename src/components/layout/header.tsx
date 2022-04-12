@@ -26,7 +26,7 @@ function Link({
             )}  ${style(
                 'hover:text-neutrals-400',
                 'hover:text-white'
-            )} focus:font-medium ${style('', 'focus:text-white')} transition`}
+            )} active:font-medium ${style('', 'active:text-white')} transition`}
             href="#"
         >
             {children}
@@ -113,8 +113,8 @@ export default function Header({
                             <div className="hidden lg:block">
                                 <button
                                     className={`group flex h-10 w-10 items-center justify-center rounded-3xl ${style(
-                                        'hover:bg-tangaroa hover:bg-opacity-5 focus:bg-tangaroa focus:bg-opacity-5',
-                                        'hover:bg-[#FFFFFF0D] focus:bg-[#FFFFFF0D]'
+                                        'hover:bg-tangaroa hover:bg-opacity-5 active:bg-tangaroa active:bg-opacity-5',
+                                        'hover:bg-[#FFFFFF0D] active:bg-[#FFFFFF0D]'
                                     )} group transition transform`}
                                 >
                                     <LanguageIcon style={style} />
