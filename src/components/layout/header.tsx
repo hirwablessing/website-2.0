@@ -102,8 +102,8 @@ export default function Header({
                     <div className="flex h-full items-center">
                         <div className="hidden lg:block">
                             <div className="flex h-full items-center">
-                                <Link style={style}>App</Link>
                                 <Link style={style}>Home</Link>
+                                <Link style={style}>App</Link>
                                 <Link style={style}>Mupi</Link>
                                 <Link style={style}>Contact us</Link>
                             </div>
