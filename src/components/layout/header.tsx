@@ -26,7 +26,7 @@ function Link({
             )}  ${style(
                 'hover:text-neutrals-400',
                 'hover:text-white'
-            )} focus:font-medium ${style('', 'focus:text-white')} transition`}
+            )} active:font-medium ${style('', 'active:text-white')} transition`}
             href="#"
         >
             {children}
@@ -84,15 +84,17 @@ export default function Header({
             >
                 <div className="flex h-full w-full items-center justify-between">
                     <div className="flex items-center">
-                        <div className="mr-4 block lg:hidden">
-                            <NavMenuIcon style={style} />
+                        <div className="block lg:hidden h-8 w-8 lg:h-10 lg:w-10 mr-2">
+                            <div className="h-full w-full flex items-center justify-center">
+                                <NavMenuIcon style={style} />
+                            </div>
                         </div>
                         <div
                             className={`bg-cover ${style(
                                 "bg-[url('/images/logo-group-horizontal-dark.svg')]",
                                 "bg-[url('/images/logo-group-horizontal-light.svg')]",
-                                'w-[102px] h-6',
-                                'w-[136px] h-8'
+                                'w-[103px] h-6',
+                                'w-[137px] h-8'
                             )} transform transition ease-navbar-moves`}
                         />
                     </div>
@@ -100,8 +102,8 @@ export default function Header({
                     <div className="flex h-full items-center">
                         <div className="hidden lg:block">
                             <div className="flex h-full items-center">
-                                <Link style={style}>App</Link>
                                 <Link style={style}>Home</Link>
+                                <Link style={style}>App</Link>
                                 <Link style={style}>Mupi</Link>
                                 <Link style={style}>Contact us</Link>
                             </div>
@@ -111,8 +113,8 @@ export default function Header({
                             <div className="hidden lg:block">
                                 <button
                                     className={`group flex h-10 w-10 items-center justify-center rounded-3xl ${style(
-                                        'hover:bg-tangaroa hover:bg-opacity-5 focus:bg-tangaroa focus:bg-opacity-5',
-                                        'hover:bg-[#FFFFFF0D] focus:bg-[#FFFFFF0D]'
+                                        'hover:bg-tangaroa hover:bg-opacity-5 active:bg-tangaroa active:bg-opacity-5',
+                                        'hover:bg-[#FFFFFF0D] active:bg-[#FFFFFF0D]'
                                     )} group transition transform`}
                                 >
                                     <LanguageIcon style={style} />

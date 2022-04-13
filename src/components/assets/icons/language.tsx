@@ -5,7 +5,7 @@ export default function LanguageIcon({
 }) {
     return (
         <svg
-            className="h-6 group-focus:h-5"
+            className="h-6 group-active:h-5"
             version="1.1"
             id="Livello_1"
             xmlns="http://www.w3.org/2000/svg"
