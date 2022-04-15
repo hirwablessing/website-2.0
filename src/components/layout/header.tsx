@@ -26,7 +26,7 @@ function Link({
             )}  ${style(
                 'hover:text-neutrals-400',
                 'hover:text-white'
-            )} active:font-medium ${style('', 'active:text-white')} transition`}
+            )} focus:font-medium ${style('', 'focus:text-white')} transition`}
             href="#"
         >
             {children}
@@ -100,7 +100,7 @@ export default function Header({
                     </div>
 
                     <div className="flex h-full items-center">
-                        <div className="hidden lg:block">
+                        <div className="hidden h-full lg:block">
                             <div className="flex h-full items-center">
                                 <Link style={style}>Home</Link>
                                 <Link style={style}>App</Link>
