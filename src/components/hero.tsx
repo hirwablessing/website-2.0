@@ -10,12 +10,12 @@ type CardProps = {
 }
 
 const CardContainer = ({
-                           number = 10,
-                           bgColor = '#FFF12D',
-                           size = 'sm',
-                           top = 0,
-                           left = 0
-                       }: CardProps) => {
+    number = 10,
+    bgColor = '#FFF12D',
+    size = 'sm',
+    top = 0,
+    left = 0
+}: CardProps) => {
     const formatWidths = () => {
         if (size == 'lg') return 'h-[250px] w-[492px]'
         else if (size == 'md') return 'h-[250px] w-[323px]'
@@ -28,7 +28,7 @@ const CardContainer = ({
                 'text-black text-[80px] flex justify-center items-center absolute rounded-[24px] ' +
                 formatWidths()
             }
-            style={{backgroundColor: bgColor, top: top, left: left}}
+            style={{ backgroundColor: bgColor, top: top, left: left }}
         >
             {number}
         </div>
@@ -36,19 +36,24 @@ const CardContainer = ({
 }
 
 export default function Hero() {
-
     useEffect(() => {
-        let container = document.getElementById("__container") as HTMLDivElement
+        let container = document.getElementById('__container') as HTMLDivElement
 
-        let yellows = document.getElementById("__yellows") as HTMLDivElement;
-        let blues = document.getElementById("__blues") as HTMLDivElement;
-        let reds = document.getElementById("__reds") as HTMLDivElement;
-        let texts = document.getElementById("__texts") as HTMLDivElement
+        let yellows = document.getElementById('__yellows') as HTMLDivElement
+        let blues = document.getElementById('__blues') as HTMLDivElement
+        let reds = document.getElementById('__reds') as HTMLDivElement
+        let texts = document.getElementById('__texts') as HTMLDivElement
 
-        if (container == null || yellows == null || blues == null || reds == null || texts == null) return;
+        if (
+            container == null ||
+            yellows == null ||
+            blues == null ||
+            reds == null ||
+            texts == null
+        )
+            return
 
         const handleMouseMove = (e: MouseEvent) => {
-
             // let [x, y] = [
             //     -e.pageX +window.innerWidth,
             //     -e.pageY
@@ -58,7 +63,7 @@ export default function Hero() {
             // container.style.transform = `translate(${x}px, ${y}px)`
         }
 
-        document.addEventListener("mousemove", handleMouseMove)
+        document.addEventListener('mousemove', handleMouseMove)
     }, [])
 
     return (
@@ -69,7 +74,7 @@ export default function Hero() {
             >
                 <div
                     className="h-[2350px] w-[2820px] bg-black will-change-transform mx-auto"
-                    id={"__container"}
+                    id={'__container'}
                     style={{
                         position: 'absolute',
                         top: '50%',
@@ -79,17 +84,16 @@ export default function Hero() {
                 >
                     <div id="__division" className="relative">
                         <div id="__texts">
-                            <div
-                                className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
+                            <div className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
                                 <div
                                     className="text-opacity-40 text-white"
-                                    style={{lineHeight: '2,8'}}
+                                    style={{ lineHeight: '2,8' }}
                                 >
                                     #hashtag
                                 </div>
                                 <div
                                     className="text-[64px] text-white font-medium tracking-[-0.5px]"
-                                    style={{lineHeight: 1.2}}
+                                    style={{ lineHeight: 1.2 }}
                                 >
                                     <div>You can</div>
                                     <div>be the change.</div>
@@ -100,7 +104,7 @@ export default function Hero() {
                                         Get the Beta
                                     </div>
                                     <div>
-                                        <ArrowRightIcon/>
+                                        <ArrowRightIcon />
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +262,6 @@ export default function Hero() {
                                 left={1852}
                             />
 
-
                             <CardContainer
                                 bgColor={'#2D73FF'}
                                 number={17}
@@ -267,7 +270,6 @@ export default function Hero() {
                                 left={2037}
                             />
                         </div>
-
                     </div>
                 </div>
             </div>
