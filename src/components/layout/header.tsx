@@ -69,11 +69,7 @@ export default function Header({
     }
 
     return (
-        <div
-            className={
-                style('bg-white', 'bg-black') + ' sticky top-0 z-20 mt-5'
-            }
-        >
+        <div className={style('bg-white', 'bg-black') + ' sticky top-0 z-20'}>
             <div
                 className={`${style(
                     '',

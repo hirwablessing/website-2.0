@@ -1,3 +1,5 @@
+import App from '@/components/app'
+import Hero from '@/components/hero'
 import Header from '@/components/layout/header'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -17,9 +19,8 @@ const Home: NextPage = () => {
 
             <main className="bg-neutrals-30 h-screen">
                 <Header isDark />
-                <Header isDark isEnlarged />
-                <Header />
-                <Header isEnlarged />
+                <Hero />
+                <App />
             </main>
         </Fragment>
     )
