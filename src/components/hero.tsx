@@ -17,20 +17,24 @@ const CardContainer = ({
     left = 0
 }: CardProps) => {
     const formatWidths = () => {
-        if (size == 'lg') return 'h-[250px] w-[492px]'
-        else if (size == 'md') return 'h-[250px] w-[323px]'
-        else return 'h-[288px] w-[201px]'
+        if (size == 'lg') return 'h-[310px] w-[452px]'
+        else if (size == 'md') return 'h-[310px] w-[412px]'
+        else return 'h-[348px] w-[261px]'
     }
 
     return (
         <div
             className={
-                'text-black text-[80px] flex justify-center items-center absolute rounded-[24px] ' +
-                formatWidths()
+                'text-black text-[80px] p-[30px] absolute ' + formatWidths()
             }
-            style={{ backgroundColor: bgColor, top: top, left: left }}
+            style={{ top: top - 30, left: left - 30 }}
         >
-            {number}
+            <div
+                className="h-full w-full rounded-[24px] flex justify-center items-center"
+                style={{ backgroundColor: bgColor }}
+            >
+                {number}
+            </div>
         </div>
     )
 }
@@ -83,22 +87,24 @@ export default function Hero() {
                     }}
                 >
                     <div id="__division" className="relative">
-                        <div id="__texts">
+                        <div id="__texts" className="h-[2350px] w-[2820px]">
                             <div className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
-                                <div
+                                <p
                                     className="text-opacity-40 text-white"
                                     style={{ lineHeight: '2,8' }}
                                 >
                                     #hashtag
-                                </div>
-                                <div
+                                </p>
+                                <h2
                                     className="text-[64px] text-white font-medium tracking-[-0.5px]"
                                     style={{ lineHeight: 1.2 }}
                                 >
-                                    <div>You can</div>
-                                    <div>be the change.</div>
-                                    <div>You decide.</div>
-                                </div>
+                                    <span className="block">You can</span>
+                                    <span className="block">
+                                        be the change.
+                                    </span>
+                                    <span className="block">You decide.</span>
+                                </h2>
                                 <div className="flex items-center justify-center mt-[26px]">
                                     <div className="font-medium text-opacity-40 text-white">
                                         Get the Beta
@@ -109,7 +115,7 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
-                        <div id="__yellows">
+                        <div id="__yellows" className="h-[2350px] w-[2820px]">
                             <CardContainer
                                 bgColor={'#FFF12D'}
                                 number={14}
@@ -161,7 +167,7 @@ export default function Hero() {
                                 left={1680}
                             />
                         </div>
-                        <div id="__reds">
+                        <div id="__reds" className="h-[2350px] w-[2820px]">
                             <CardContainer
                                 bgColor={'#FF334E'}
                                 number={15}
@@ -207,7 +213,7 @@ export default function Hero() {
                                 left={1032}
                             />
                         </div>
-                        <div id="__blues">
+                        <div id="__blues" className="h-[2350px] w-[2820px]">
                             <CardContainer
                                 bgColor={'#2D73FF'}
                                 number={13}
