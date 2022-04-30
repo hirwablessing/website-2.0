@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import ArrowRightIcon from '@/components/assets/icons/arrow-right'
 import Image from 'next/image'
+import BasicArrowDown from './assets/icons/arrow-basic-down'
 
 type CardProps = {
     number?: number
@@ -286,12 +287,7 @@ export default function Hero() {
             <div className="h-[100px] absolute bottom-0 w-full bg-gradient-to-t from-[#0A0912B8] to-[#0A091200] flex flex-col justify-center items-center text-white">
                 <div className="text-caption">Scroll down</div>
                 <div className="w-4 h-4">
-                    <Image
-                        width={16}
-                        height={16}
-                        src="/icons/arrow-basic-down-medium.svg"
-                        alt=""
-                    />
+                    <BasicArrowDown />
                 </div>
             </div>
         </>
