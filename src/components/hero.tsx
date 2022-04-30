@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import ArrowRightIcon from '@/components/assets/icons/arrow-right'
+import Image from 'next/image'
+import BasicArrowDown from './assets/icons/arrow-basic-down'
 
 type CardProps = {
     number?: number
@@ -76,18 +78,12 @@ export default function Hero() {
                 className="h-screen relative bg-[#F7F9FC] dark:bg-black overflow-hidden -mt-10 lg:-mt-16"
                 id="__hero"
             >
-                <div
-                    className="h-[2350px] w-[2820px] bg-black will-change-transform mx-auto"
-                    id={'__container'}
-                    style={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)'
-                    }}
-                >
-                    <div id="__division" className="relative">
-                        <div id="__texts" className="h-[2350px] w-[2820px]">
+                <div id={'__container'}>
+                    <div
+                        id="__division"
+                        className="h-[102vh] w-[102vw] bg-black relative"
+                    >
+                        <div id="__texts" className="canvas">
                             <div className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
                                 <p
                                     className="text-opacity-40 text-white"
@@ -115,7 +111,10 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
-                        <div id="__yellows" className="h-[2350px] w-[2820px]">
+                        <div
+                            id="__yellows"
+                            className="h-[2350px] w-[2820px] canvas"
+                        >
                             <CardContainer
                                 bgColor={'#FFF12D'}
                                 number={14}
@@ -167,7 +166,10 @@ export default function Hero() {
                                 left={1680}
                             />
                         </div>
-                        <div id="__reds" className="h-[2350px] w-[2820px]">
+                        <div
+                            id="__reds"
+                            className="h-[2350px] w-[2820px] canvas"
+                        >
                             <CardContainer
                                 bgColor={'#FF334E'}
                                 number={15}
@@ -213,7 +215,10 @@ export default function Hero() {
                                 left={1032}
                             />
                         </div>
-                        <div id="__blues" className="h-[2350px] w-[2820px]">
+                        <div
+                            id="__blues"
+                            className="h-[2350px] w-[2820px] canvas"
+                        >
                             <CardContainer
                                 bgColor={'#2D73FF'}
                                 number={13}
@@ -277,6 +282,12 @@ export default function Hero() {
                             />
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="h-[100px] absolute bottom-0 w-full bg-gradient-to-t from-[#0A0912B8] to-[#0A091200] flex flex-col justify-center items-center text-white">
+                <div className="text-caption">Scroll down</div>
+                <div className="w-4 h-4">
+                    <BasicArrowDown />
                 </div>
             </div>
         </>
