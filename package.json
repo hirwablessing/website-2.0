@@ -6,7 +6,7 @@
         "build": "next build && next export",
         "start": "next start",
         "lint": "next lint",
-        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc --loglevel=error",
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc --loglevel=error ; git add .",
         "prepare": "husky install"
     },
     "dependencies": {
