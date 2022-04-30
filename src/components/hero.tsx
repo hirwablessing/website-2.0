@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import ArrowRightIcon from '@/components/assets/icons/arrow-right'
+import Image from 'next/image'
 
 type CardProps = {
     number?: number
@@ -86,10 +87,7 @@ export default function Hero() {
                         transform: 'translate(-50%, -50%)'
                     }}
                 >
-                    <div
-                        id="__division"
-                        className="relative h-[102vh] w-[102vw]"
-                    >
+                    <div id="__division" className="h-[102vh] w-[102vw]">
                         <div id="__texts" className="h-[2350px] w-[2820px]">
                             <div className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
                                 <p
@@ -284,7 +282,12 @@ export default function Hero() {
                 <div className="h-[100px] absolute bottom-0 w-screen bg-gradient-to-t from-[#0A0912B8] to-[#0A091200] flex flex-col justify-center items-center text-white">
                     <div className="text-caption">Scroll down</div>
                     <div className="w-4 h-4">
-                        <img src="/icons/arrow-basic-down-medium.svg" alt="" />
+                        <Image
+                            width={16}
+                            height={16}
+                            src="/icons/arrow-basic-down-medium.svg"
+                            alt=""
+                        />
                     </div>
                 </div>
             </div>
