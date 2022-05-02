@@ -1,7 +1,7 @@
 export default function ArrowRightIcon() {
     return (
         <svg
-            className="h-10 w-20 opacity-40"
+            className="h-[28px] ml-2 w-[28px] opacity-40"
             version="1.1"
             id="Livello_1"
             xmlns="http://www.w3.org/2000/svg"
