@@ -80,7 +80,7 @@ export default function Hero() {
             >
                 <div className="h-screen w-screen">
                     <div className="h-screen w-screen">
-                        <div id={'__container h-screen w-screen'}>
+                        <div id={'container'} className="h-screen w-screen">
                             <div
                                 id="__division"
                                 className="h-[102vh] w-[102vw] bg-black relative"
