@@ -75,7 +75,7 @@ export default function Hero() {
     return (
         <>
             <div
-                className="h-screen w-screen relative bg-[#F7F9FC] dark:bg-black overflow-hidden -mt-10 lg:-mt-16"
+                className="h-screen relative bg-[#F7F9FC] dark:bg-black overflow-hidden -mt-10 lg:-mt-16"
                 id="__hero"
             >
                 <div className="h-screen w-screen">
@@ -83,10 +83,13 @@ export default function Hero() {
                         <div id={'__container h-screen w-screen'}>
                             <div
                                 id="__division"
-                                className="h-[102vh] w-[102vw] bg-black relative"
+                                className="h-[100vh] w-[100vw] bg-black relative"
                             >
-                                <div id="__texts" className="canvas">
-                                    <div className="absolute top-[1024px] text-[20px] left-[1197px] h-[302px] text-center w-[427px]">
+                                <div
+                                    id="__texts"
+                                    className="canvas flex justify-center items-center"
+                                >
+                                    <div className="text-center">
                                         <p
                                             className="text-opacity-40 text-white"
                                             style={{ lineHeight: '2,8' }}
