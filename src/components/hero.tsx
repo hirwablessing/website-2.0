@@ -83,7 +83,7 @@ export default function Hero() {
                         <div id={'__container h-screen w-screen'}>
                             <div
                                 id="__division"
-                                className="h-[100vh] w-[100vw] bg-black relative"
+                                className="h-[102vh] w-[102vw] bg-black relative"
                             >
                                 <div
                                     id="__texts"
