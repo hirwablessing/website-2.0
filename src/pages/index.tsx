@@ -17,10 +17,12 @@ const Home: NextPage = () => {
                 <title>Moogli</title>
             </Head>
 
+            <Header isDark />
             <main className="bg-neutrals-30 h-screen">
-                <Header isDark />
-                <Hero />
-                <App />
+                <section>
+                    <Hero />
+                    <App />
+                </section>
             </main>
         </Fragment>
     )

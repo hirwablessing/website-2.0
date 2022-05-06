@@ -19,7 +19,7 @@ const CardContainer = ({
     left = 0
 }: CardProps) => {
     const formatWidths = () => {
-        if (size == 'lg') return 'h-[310px] w-[452px]'
+        if (size == 'lg') return 'h-[310px] w-[552px]'
         else if (size == 'md') return 'h-[310px] w-[412px]'
         else return 'h-[348px] w-[261px]'
     }
@@ -73,7 +73,7 @@ export default function Hero() {
     }, [])
 
     return (
-        <>
+        <div className="z-40 after:h-[72px] after:absolute after:bottom-0 after:w-full after:bg-gradient-to-t after:from-[#0A0912B8] after:to-[#0A091200] before:h-[72px] before:absolute before:top-0 before:w-full before:bg-gradient-to-b before:from-[#0A0912B8] before:to-[#0A091200] before:z-10">
             <div
                 className="h-screen relative bg-[#F7F9FC] dark:bg-black overflow-hidden -mt-10 lg:-mt-16"
                 id="__hero"
@@ -295,12 +295,12 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="h-[100px] absolute bottom-0 w-full bg-gradient-to-t from-[#0A0912B8] to-[#0A091200] flex flex-col justify-center items-center text-white">
+            <div className="h-[72px] absolute bottom-0 w-full flex flex-col justify-center items-center text-white">
                 <div className="text-caption">Scroll down</div>
                 <div className="w-4 h-4">
                     <BasicArrowDown />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
