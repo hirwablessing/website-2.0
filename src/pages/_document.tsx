@@ -16,10 +16,10 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head />
-                <body className="dark:bg-black dark:text-white">
+                <>
                     <Main />
                     <NextScript />
-                </body>
+                </>
             </Html>
         )
     }
